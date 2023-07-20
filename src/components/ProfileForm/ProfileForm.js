@@ -1,11 +1,21 @@
-import { Button, Form, FormWrapper, Input, InputWrapper, Label } from "./ProfileForm.styled";
+import {
+  Button,
+  Form,
+  FormWrapper,
+  Input,
+  InputWrapper,
+  Label,
+} from "./ProfileForm.styled";
 
-const ProfileForm = () => {
+const ProfileForm = ({ submit }) => {
+
+
+
   return (
     <FormWrapper>
       <h1>Edit your profile</h1>
 
-      <Form>
+      <Form onSubmit={submit}>
         <InputWrapper>
           <Label htmlFor="name">Name</Label>
           <Input
@@ -36,7 +46,7 @@ const ProfileForm = () => {
           />
         </InputWrapper>
 
-        <Button>Save Changes</Button>
+        <Button type="submit">Save Changes</Button>
       </Form>
     </FormWrapper>
   );
